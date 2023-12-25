@@ -1,14 +1,13 @@
 import { Configuration, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
-	organization: 'org-i5ZJjyWAyhGgofxS14HjKmEZ',
+	organization: process.env.OPENAI_ORG_ID,
 	apiKey: process.env.OPENAI_API_KEY,
 });
 export const openai = new OpenAIApi(configuration);
 
 export async function OpenAIRequest(prompt: string, temp: number) {
 	const response = await openai.createCompletion({
-		// model: 'text-curie-001',
 		model: 'text-davinci-003',
 		prompt: prompt,
 		max_tokens: 2000,
@@ -18,7 +17,6 @@ export async function OpenAIRequest(prompt: string, temp: number) {
 }
 export async function OpenAIRequestCurie(prompt: string) {
 	const response = await openai.createCompletion({
-		// model: 'text-curie-001',
 		model: 'text-curie-001',
 		prompt: prompt,
 		max_tokens: 1000,

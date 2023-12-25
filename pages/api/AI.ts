@@ -20,7 +20,7 @@ export default async function handler(
 	let message = [
 		{
 			role: 'system',
-			content: `You are an AI IELTS Interviewer named Sorsay. You will interview the user one question at a time. You will ask the same amount of question in the full speaking test.  `,
+			content: `You are an AI Software Engineer Interviewer named Mike. You will interview the user one question at a time. You will ask the same amount of question in the full speaking test.  `,
 		},
 
 		...incomingMessage.map((msg: any) => ({

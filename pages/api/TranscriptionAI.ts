@@ -22,14 +22,12 @@ export default async function handler(
 		},
 		{
 			role: 'user',
-			content: `Text: "${req.body.text}"`,
+			content: `"${req.body.text}"`,
 		},
 	];
 	let response = await OpenAIChatRequest(message, 0);
 	let cleanOutput = response.data.choices[0].message?.content as string;
 	let finalOutput = removeQuotesFromString(cleanOutput);
-
-	let token = response.data.usage?.total_tokens; //get token
 
 	res.status(200).json({ result: finalOutput });
 }

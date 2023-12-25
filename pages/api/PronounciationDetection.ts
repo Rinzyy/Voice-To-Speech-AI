@@ -22,7 +22,7 @@ export default async function handler(
 		},
 		{
 			role: 'user',
-			content: `Text: "I'm berry close with my famine, even though we live far apart. My parents and sapling live in the U.S, so we don't get to see each other berry often. But we make shore to stay in touch through phone calls, emails, and video chats. I rarely value their support and encouragement, especially when I'm facing challenges."`,
+			content: `"I'm berry close with my famine, even though we live far apart. My parents and sapling live in the U.S, so we don't get to see each other berry often. But we make shore to stay in touch through phone calls, emails, and video chats. I rarely value their support and encouragement, especially when I'm facing challenges."`,
 		},
 		{
 			role: 'assistant',
@@ -30,7 +30,7 @@ export default async function handler(
 		},
 		{
 			role: 'user',
-			content: `Text: "${req.body.text}"`,
+			content: `"${req.body.text}"`,
 		},
 	];
 	let response = await OpenAIChatRequest(message, 0.7);

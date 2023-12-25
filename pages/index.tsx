@@ -4,27 +4,14 @@ import SpeechRecognition, {
 	useSpeechRecognition,
 } from 'react-speech-recognition';
 import { useEffect, useRef, useState } from 'react';
-import { useTypingEffect } from '@/Hooks/TypingEffect';
 import Chat from '@/components/Chat';
-import GradingType from '@/components/Grading/GradingType';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
 	const [messages, setMessages] = useState([
-		{ role: 'assistant', content: 'This is an IETLS Interview.' },
-		{
-			role: 'user',
-			content: `So, hi, this is my first. Like that, Welcome to the introductory. So, here's the presentation slide for the first slide. The first light we're going to talk about AI. It is a very important topic that is brought up very frequently doing this time.
-`,
-		},
-		{
-			role: 'assistant',
-			content:
-				'Hello! I am Sorsay, an AI IELTS Interviewer. Nice to meet you. Are you ready to start the speaking test?',
-		},
+		{ role: 'assistant', content: 'This is an Software Engineer Interview.' },
 	]);
 
-	const [pronounceMessage, setPronounceMessage] = useState(messages);
 	const { finalTranscript, transcript, listening, resetTranscript } =
 		useSpeechRecognition();
 
@@ -77,13 +64,6 @@ export default function Home() {
 		resetTranscript();
 		setDisplayInput('');
 		setDoneSpeaking(false);
-	};
-
-	const handleMessageDisplay = async () => {
-		if (messages != pronounceMessage) {
-			setMessages(pronounceMessage);
-		} else {
-		}
 	};
 
 	const sendStringToClean = async () => {
@@ -165,15 +145,7 @@ export default function Home() {
 						onClick={handleInput}>
 						Continue
 					</button>
-
-					<button
-						disabled={boolCon}
-						className=" w-40 border-2 rounded-md border-black shadow-lg px-2 py-1 disabled:bg-gray-100 disabled:text-gray-600"
-						onClick={handleMessageDisplay}>
-						9 IELTS Display
-					</button>
 				</div>
-				
 			</div>
 		</div>
 	);
