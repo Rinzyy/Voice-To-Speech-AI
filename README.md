@@ -1,4 +1,4 @@
-# NextJS Chat Application with OpenAI GPT Integration
+# NextJS Voice-to-Text Chat Application with OpenAI GPT Integration
 
 This project is a NextJS-based chat application that utilizes OpenAI's GPT models for a conversational AI experience. Users can interact with the chatbot using voice, which is then processed and responded to in real-time.
 
