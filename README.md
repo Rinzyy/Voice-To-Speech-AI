@@ -28,10 +28,9 @@ Ensure you have the following installed:
 ```npm install```
 4. Environment Variables
 To run this project, you will need to add the following environment variables to your .env file:
-
+```
 NEXT_PUBLIC_OPENAI_ORG_ID: Your OpenAI Organization ID.
-
 NEXT_PUBLIC_OPENAI_API_KEY: Your OpenAI API Key.
-
+```
 5. Run locally
 ```npm run dev```
