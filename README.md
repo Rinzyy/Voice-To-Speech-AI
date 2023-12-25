@@ -23,20 +23,14 @@ Ensure you have the following installed:
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-Navigate to the project directory:
-bash
-Copy code
-cd your-repo-name
-Install NPM packages:
-bash
-Copy code
-npm install
-Environment Variables
+2. Navigate to the project directory:
+3. Install NPM packages:
+```npm install```
+4. Environment Variables
 To run this project, you will need to add the following environment variables to your .env file:
 
 NEXT_PUBLIC_OPENAI_ORG_ID: Your OpenAI Organization ID.
 NEXT_PUBLIC_OPENAI_API_KEY: Your OpenAI API Key.
-Usage
-Describe how to use your application including any special commands or steps.
+
+5. Run locally
+```npm run dev```
